@@ -15,6 +15,7 @@ on:
 jobs:
   # This workflow contains a single job called "build"
   build:
+    environment: SEC1
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -24,6 +25,6 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: echo Hello, world!
+        run: echo ${{ secrets.SEC1 }}
 
 
